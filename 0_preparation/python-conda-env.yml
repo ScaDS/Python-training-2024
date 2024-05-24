@@ -8,3 +8,4 @@ dependencies:
   - jupyterlab
   - voila
   - pandas
+  - openai~=1.30.2
