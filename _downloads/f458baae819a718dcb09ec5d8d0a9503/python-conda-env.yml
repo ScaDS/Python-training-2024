@@ -1,0 +1,10 @@
+name: python-training-env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - notebook
+  - jupyterlab
+  - voila
+  - pandas
