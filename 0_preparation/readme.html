@@ -168,7 +168,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Use of chatbots</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../2_chatbots/readme.html">TODO</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../2_chatbots/readme.html">A Chatbot Graphical User Interface</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -431,7 +431,8 @@ Miniconda will take up about 400 MB of disk space.</p>
 <li><p><em>Verify the Installation</em>:</p>
 <ul class="simple">
 <li><p>Open a terminal or command prompt.</p></li>
-<li><p>Type <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">--version</span></code> and press Enter. You should see the Conda version number, indicating that the installation was successful.</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">--version</span></code> and press Enter.</p></li>
+<li><p>You should see the Conda version number (like in the screenshot), indicating that the installation was successful.</p></li>
 </ul>
 </li>
 </ol>
@@ -452,18 +453,21 @@ Such files are written in <a class="reference external" href="https://en.wikiped
 <p>A YAML environment file is used to automate the creation of Conda environments.
 Instead of manually installing packages one by one, you list all necessary packages and their versions in the YAML file.
 Conda reads this file and sets up the environment accordingly.
-We provide the needed file, please download it <a class="reference download internal" download="" href="../_downloads/f458baae819a718dcb09ec5d8d0a9503/python-conda-env.yml"><span class="xref download myst">here</span></a>,
-and execute the following commands in you terminal.</p>
+We provide the needed file, please download it <a class="reference download internal" download="" href="../_downloads/f458baae819a718dcb09ec5d8d0a9503/python-conda-env.yml"><span class="xref download myst">here</span></a>.</p>
 </section>
 <section id="create-a-new-conda-environment-with-the-given-file">
 <h4>Create a new Conda environment with the given file<a class="headerlink" href="#create-a-new-conda-environment-with-the-given-file" title="Permalink to this heading">#</a></h4>
 <p>Make sure to run the terminal where the file is located or provide the full path to the downloaded file.</p>
-<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">create</span> <span class="pre">-f</span> <span class="pre">python-conda-env.yml</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">-</span><span class="n">f</span> <span class="n">python</span><span class="o">-</span><span class="n">conda</span><span class="o">-</span><span class="n">env</span><span class="o">.</span><span class="n">yml</span>
+</pre></div>
+</div>
 <p>This will download all the defined packages into the newly created Conda environment with Python in version 3.12.
-You should end up with a success message similar to this:</p>
+You should end up with a success message similar to the screenshot below:</p>
 <p><img alt="img.png" src="../_images/conda_env-create-done.png" /></p>
-<p>Check whether the new environment is listed via:</p>
-<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">list</span></code></p>
+<p>Then, check whether the new environment is listed via:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="nb">list</span>
+</pre></div>
+</div>
 <p>This should show at least two installed environments with their respective paths in your file system:</p>
 <ul class="simple">
 <li><p>base</p></li>
@@ -578,7 +582,7 @@ By Matthias Täschner, Robert Haase
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2024-05-24.
+  Last updated on 2024-05-27.
   <br/>
 </p>
   </div>

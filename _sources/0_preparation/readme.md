@@ -34,7 +34,8 @@ Follow these steps to install Miniconda on your computer:
 
 3. _Verify the Installation_:
    * Open a terminal or command prompt.
-   * Type `conda --version` and press Enter. You should see the Conda version number, indicating that the installation was successful.
+   * Type `conda --version` and press Enter. 
+   * You should see the Conda version number (like in the screenshot), indicating that the installation was successful.
 
 ![img.png](conda_verify-install.png)
 
@@ -53,23 +54,26 @@ Such files are written in [YAML](https://en.wikipedia.org/wiki/YAML), a human-re
 A YAML environment file is used to automate the creation of Conda environments.
 Instead of manually installing packages one by one, you list all necessary packages and their versions in the YAML file.
 Conda reads this file and sets up the environment accordingly. 
-We provide the needed file, please download it [here](python-conda-env.yml),
-and execute the following commands in you terminal.
+We provide the needed file, please download it [here](python-conda-env.yml).
 
 #### Create a new Conda environment with the given file
 
 Make sure to run the terminal where the file is located or provide the full path to the downloaded file.
 
-```conda env create -f python-conda-env.yml```
+```
+conda env create -f python-conda-env.yml
+```
 
 This will download all the defined packages into the newly created Conda environment with Python in version 3.12.
-You should end up with a success message similar to this:
+You should end up with a success message similar to the screenshot below:
 
 ![img.png](conda_env-create-done.png)
 
-Check whether the new environment is listed via:
+Then, check whether the new environment is listed via:
 
-```conda env list```
+```
+conda env list
+```
 
 This should show at least two installed environments with their respective paths in your file system:
 * base
