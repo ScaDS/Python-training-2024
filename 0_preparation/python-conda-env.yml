@@ -10,3 +10,5 @@ dependencies:
   - pandas
   - ipywidgets
   - openai~=1.30.2
+  - pip:
+    - bia-bob==0.15.0

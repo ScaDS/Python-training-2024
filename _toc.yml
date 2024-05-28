@@ -16,6 +16,12 @@ parts:
       - file: 1_python_basics/01_jupyter_notebooks.ipynb
       - file: 1_python_basics/02_basic_terms_and_types.ipynb
 
+
+  - caption: Tables and plotting, AI supported
+    chapters:
+    - file: 2_tables_plots/beginner_weather_analysis.ipynb
+    - file: 2_tables_plots/ai_code_generation.ipynb
+
   - caption: Use of chatbots
     chapters:
     - file: 2_chatbots/readme.md
