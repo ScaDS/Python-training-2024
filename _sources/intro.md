@@ -9,8 +9,12 @@ This is the website of the Python programming training @ ScaDS.AI 2024. We provi
 * Target audience: Students with an interest in learning programming with Python and the use of chatbots for programming tasks. No prior experience is required.
 
 Our training includes these additional python libraries:
+* [juypterlab](https://jupyter.org/)
+* [voila](https://github.com/voila-dashboards/voila)
 * [pandas](https://pandas.pydata.org/)
 * [seaborn](https://seaborn.pydata.org/)
+* [openai](https://github.com/openai/openai-python)
+* [bia-bob](https://github.com/haesleinhuepf/bia-bob)
 
 ## Trainers
 
@@ -19,7 +23,8 @@ Our training includes these additional python libraries:
 
 ## Program
 <pre>
-* Python Basics
+* Python basics
+* Tables and plotting, AI supported
 * Use of chatbots
 </pre>
 
