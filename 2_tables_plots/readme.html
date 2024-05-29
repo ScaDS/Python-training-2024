@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>A chatbot GUI &#8212; Python Programming Basics Training @ ScaDS.AI, June 2024</title>
+    <title>Python for tabular data analysis &#8212; Python Programming Basics Training @ ScaDS.AI, June 2024</title>
   
   
   
@@ -61,9 +61,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '2_chatbots/gui';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '2_tables_plots/readme';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Code generation using AI" href="ai_code_generation.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="../1_python_basics/02_basic_terms_and_types.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -164,9 +166,11 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Use of chatbots</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="readme.html">A Chatbot Graphical User Interface</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tables and plotting, AI supported</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Python for tabular data analysis</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="ai_code_generation.html">Code generation using AI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_weather_analysis.html">Python Weather Analysis</a></li>
 </ul>
 </li>
 </ul>
@@ -247,7 +251,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/scads/Python-training-2024/issues/new?title=Issue%20on%20page%20%2F2_chatbots/gui.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/scads/Python-training-2024/issues/new?title=Issue%20on%20page%20%2F2_tables_plots/readme.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -277,7 +281,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/2_chatbots/gui.ipynb" target="_blank"
+      <li><a href="../_sources/2_tables_plots/readme.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -287,7 +291,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -346,7 +350,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -357,11 +363,28 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>A chatbot GUI</h1>
+    <h1>Python for tabular data analysis</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-cases-for-tabular-data-analysis">Use Cases for Tabular Data Analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-need-for-convenient-tools">The Need for Convenient Tools</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-pandas">What is Pandas?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-generation-and-data-analysis-with-ai">Code generation and data analysis with AI</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-generative-ai-can-help-beginners">How Generative AI Can Help Beginners</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#considerations-for-using-ai-generated-code">Considerations for Using AI-Generated Code</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -371,131 +394,70 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="a-chatbot-gui">
-<h1>A chatbot GUI<a class="headerlink" href="#a-chatbot-gui" title="Permalink to this heading">#</a></h1>
-<p>This is a graphical user interface around a basic chatbot. Feel free to modify this text.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This Jupyter notebook can be used to build a graphical user interface for a chatbot. </span>
-<span class="c1"># Just run this from the terminal:</span>
-<span class="c1">#</span>
-<span class="c1"># voila gui.ipynb</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">openai</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">prompt_chatGPT</span><span class="p">(</span><span class="n">message</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-3.5-turbo&quot;</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;A prompt helper function that sends a message to openAI</span>
-<span class="sd">    and returns only the text response.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">import</span> <span class="nn">os</span>
-    
-    <span class="c1"># convert message in the right format if necessary</span>
-    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">message</span><span class="p">}]</span>
-        
-    <span class="c1"># setup connection to the LLM</span>
-    <span class="c1"># todo: You may have to enter an API Key below</span>
-    <span class="c1">#client = openai.OpenAI(api_key = &quot;YOUR_API_KEY&quot;)</span>
-    <span class="n">client</span> <span class="o">=</span> <span class="n">openai</span><span class="o">.</span><span class="n">OpenAI</span><span class="p">(</span><span class="n">api_key</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;OPENAI_API_KEY&#39;</span><span class="p">))</span>
-    
-    <span class="c1"># submit prompt</span>
-    <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
-        <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span>
-        <span class="n">messages</span><span class="o">=</span><span class="n">message</span>
-    <span class="p">)</span>
-    
-    <span class="c1"># extract answer</span>
-    <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">content</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prompt</span> <span class="o">=</span> <span class="n">prompt_chatGPT</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chat_history</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">def</span> <span class="nf">prompt_with_memory</span><span class="p">(</span><span class="n">message</span><span class="p">:</span><span class="nb">str</span><span class="p">):</span>
-    
-    <span class="c1"># convert message in the right format and store it in memory</span>
-    <span class="n">question</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">message</span><span class="p">}</span>
-    <span class="n">chat_history</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">question</span><span class="p">)</span>
-    
-    <span class="c1"># receive answer</span>
-    <span class="n">response</span> <span class="o">=</span> <span class="n">prompt</span><span class="p">(</span><span class="n">chat_history</span><span class="p">)</span>
-    
-    <span class="c1"># convert answer in the right format and store it in memory</span>
-    <span class="n">answer</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;assistant&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">message</span><span class="p">}</span>
-    <span class="n">chat_history</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
-    
-    <span class="k">return</span> <span class="n">response</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Here we can inject knowledge into the chatbot, by telling things the user of our chatbot won&#39;t see.</span>
-
-<span class="n">_</span> <span class="o">=</span> <span class="n">prompt_with_memory</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">You are an extremely talented Python programmer, but you are rude and pedantic.</span>
-<span class="s2">You tend to tell everyone that you know things better than everybody else.</span>
-<span class="s2">Keep your answers 2-3 sentences short.</span>
-<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
-
-<span class="c1"># Create widgets</span>
-<span class="n">output_label</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-<span class="n">text_input</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="n">placeholder</span><span class="o">=</span><span class="s2">&quot;Type something here...&quot;</span><span class="p">)</span>
-<span class="n">submit_button</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Submit&quot;</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">on_submit</span><span class="p">(</span><span class="n">e</span><span class="p">):</span>
-    <span class="n">question</span> <span class="o">=</span> <span class="n">text_input</span><span class="o">.</span><span class="n">value</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">question</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span>
-    <span class="n">text_input</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-
-    <span class="c1"># submit prompt to LLM</span>
-    <span class="n">answer</span> <span class="o">=</span> <span class="n">prompt_with_memory</span><span class="p">(</span><span class="n">question</span><span class="p">)</span>
-
-    <span class="c1"># Append question and answer to the existing HTML content</span>
-    <span class="n">output_label</span><span class="o">.</span><span class="n">value</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">    &lt;div style=&#39;text-align:right; color: blue; font-size: 20px&#39;&gt;</span><span class="si">{</span><span class="n">question</span><span class="si">}</span><span class="s2">&lt;/div&gt;</span>
-<span class="s2">    &lt;div style=&#39;text-align:left; color: darkgreen; font-size: 20px&#39;&gt;</span><span class="si">{</span><span class="n">answer</span><span class="si">}</span><span class="s2">&lt;/div&gt;</span>
-<span class="s2">    &quot;&quot;&quot;</span>
-
-<span class="c1"># Attach the event handler to the text field and the button</span>
-<span class="n">text_input</span><span class="o">.</span><span class="n">continuous_update</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="n">text_input</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">on_submit</span><span class="p">)</span>
-<span class="n">submit_button</span><span class="o">.</span><span class="n">on_click</span><span class="p">(</span><span class="n">on_submit</span><span class="p">)</span>
-
-<span class="c1"># Arrange the widgets for display</span>
-<span class="n">display</span><span class="p">(</span><span class="n">output_label</span><span class="p">,</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">text_input</span><span class="p">,</span> <span class="n">submit_button</span><span class="p">]))</span>
-</pre></div>
-</div>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="python-for-tabular-data-analysis">
+<h1>Python for tabular data analysis<a class="headerlink" href="#python-for-tabular-data-analysis" title="Permalink to this heading">#</a></h1>
+<p>In this part of the training, we will show how Python and the <a class="reference external" href="https://pandas.pydata.org/docs/index.html">pandas</a> package can be used to analyze structured (tabular) data.
+We’ll also make use of generative AI, i.e., chatbots, to assist us with the generation of data and code.</p>
+<section id="use-cases-for-tabular-data-analysis">
+<h2>Use Cases for Tabular Data Analysis<a class="headerlink" href="#use-cases-for-tabular-data-analysis" title="Permalink to this heading">#</a></h2>
+<p>Tabular data analysis is a fundamental task across various research fields, not limited to computer science and machine learning. Here are some examples of how different fields use tabular data analysis:</p>
+<ul class="simple">
+<li><p><strong>Social Sciences</strong>: Researchers analyze survey data, demographic statistics, and social trends to study human behavior, societal changes, and policy impacts.</p></li>
+<li><p><strong>Healthcare and Medicine</strong>: Medical researchers examine patient records, clinical trial results, and public health data to identify disease patterns, treatment outcomes, and healthcare efficiencies.</p></li>
+<li><p><strong>Finance and Economics</strong>: Economists and financial analysts explore economic indicators, stock market data, and financial transactions to understand economic trends, forecast market movements, and make investment decisions.</p></li>
+<li><p><strong>Environmental Science</strong>: Environmental researchers analyze climate data, pollution levels, and biodiversity metrics to study environmental changes, assess ecological impacts, and develop conservation strategies.</p></li>
+<li><p><strong>Education</strong>: Educators and academic researchers examine student performance data, educational outcomes, and institutional statistics to improve teaching methods, curriculum design, and educational policies.</p></li>
+</ul>
+<section id="the-need-for-convenient-tools">
+<h3>The Need for Convenient Tools<a class="headerlink" href="#the-need-for-convenient-tools" title="Permalink to this heading">#</a></h3>
+<p>Analyzing tabular data can be complex and time-consuming. Researchers need efficient and convenient tools to:</p>
+<ul class="simple">
+<li><p>Clean and preprocess data</p></li>
+<li><p>Perform statistical analyses</p></li>
+<li><p>Visualize data trends and patterns</p></li>
+<li><p>Handle large datasets efficiently</p></li>
+<li><p>Collaborate and share findings</p></li>
+</ul>
+</section>
+</section>
+<section id="what-is-pandas">
+<h2>What is Pandas?<a class="headerlink" href="#what-is-pandas" title="Permalink to this heading">#</a></h2>
+<p><a class="reference external" href="https://pandas.pydata.org/docs/index.html">Pandas</a> is a powerful, open-source Python library designed for tabular data manipulation and analysis.
+It provides data structures and functions needed to work with structured data seamlessly and intuitively.</p>
+<p>Pandas offers a wide range of features that simplify tabular data analysis:</p>
+<ul class="simple">
+<li><p><strong>Data Structures</strong>: Pandas introduces two main data structures: Series (one-dimensional) and DataFrame (two-dimensional). These structures make it easy to store, manipulate, and analyze data.</p></li>
+<li><p><strong>Data Cleaning</strong>: Pandas provides functions to handle missing data, duplicate entries, and data type conversions, ensuring your dataset is ready for analysis.</p></li>
+<li><p><strong>Data Manipulation</strong>: You can easily filter, sort, and aggregate data to derive meaningful insights.</p></li>
+<li><p><strong>Statistical Analysis</strong>: Perform descriptive statistics and more complex analyses with built-in methods.</p></li>
+<li><p><strong>Data Visualization</strong>: Pandas integrates with visualization libraries like Matplotlib and <a class="reference external" href="https://seaborn.pydata.org/">Seaborn</a> to create informative charts and plots.</p></li>
+</ul>
+<p>By using Pandas, researchers across various fields can streamline their data analysis workflows, gain deeper insights from their data, and make data-driven decisions more effectively.</p>
+</section>
+<section id="code-generation-and-data-analysis-with-ai">
+<h2>Code generation and data analysis with AI<a class="headerlink" href="#code-generation-and-data-analysis-with-ai" title="Permalink to this heading">#</a></h2>
+<section id="how-generative-ai-can-help-beginners">
+<h3>How Generative AI Can Help Beginners<a class="headerlink" href="#how-generative-ai-can-help-beginners" title="Permalink to this heading">#</a></h3>
+<p>Generative AI, including chatbots like ChatGPT, can be an invaluable resource in data analysis. Here are several ways generative AI can assist:</p>
+<ul class="simple">
+<li><p><strong>Generating Jupyter Notebooks</strong>: AI can help create ready-to-use Jupyter notebooks tailored to specific data analysis tasks. These notebooks can include code for data cleaning, analysis, and visualization, allowing beginners to understand and modify the code as needed.</p></li>
+<li><p><strong>Code Examples and Explanations</strong>: AI can provide examples and explanations for various data analysis techniques, helping beginners learn how to implement and customize different methods using pandas.</p></li>
+<li><p><strong>Step-by-Step Guidance</strong>: AI can offer step-by-step instructions for complex tasks, breaking down the process into manageable steps and ensuring beginners understand each part of the analysis.</p></li>
+</ul>
+</section>
+<section id="considerations-for-using-ai-generated-code">
+<h3>Considerations for Using AI-Generated Code<a class="headerlink" href="#considerations-for-using-ai-generated-code" title="Permalink to this heading">#</a></h3>
+<p>While generative AI can be beneficial, there are several important considerations to keep in mind regarding the generated code:</p>
+<ul class="simple">
+<li><p><strong>Accuracy and Relevance</strong>: Ensure that the generated code is accurate and relevant to your specific dataset and analysis goals. Review and test the code thoroughly before using it in your projects.</p></li>
+<li><p><strong>Understanding the Code</strong>: Beginners should strive to understand the code generated by AI. This understanding will help them learn the underlying concepts and enable them to modify and extend the code for their specific needs.</p></li>
+<li><p><strong>Data Privacy and Security</strong>: Be cautious about sharing sensitive data with AI tools. Ensure that any data used in the analysis is anonymized and secure.</p></li>
+<li><p><strong>Quality Control</strong>: AI-generated code may not always follow best practices. Review the code for readability, efficiency, and adherence to coding standards.</p></li>
+<li><p><strong>Continuous Learning</strong>: Use AI as a learning tool rather than a crutch. Continuously seek to improve your knowledge and skills in data analysis and Python programming.</p></li>
+</ul>
+</section>
+</section>
+<div class="toctree-wrapper compound">
 </div>
 </section>
 
@@ -512,7 +474,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./2_chatbots"
+            path: "./2_tables_plots"
         },
         predefinedOutput: true
     }
@@ -530,6 +492,24 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="../1_python_basics/02_basic_terms_and_types.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="ai_code_generation.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Code generation using AI</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
@@ -539,6 +519,29 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-cases-for-tabular-data-analysis">Use Cases for Tabular Data Analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-need-for-convenient-tools">The Need for Convenient Tools</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-pandas">What is Pandas?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-generation-and-data-analysis-with-ai">Code generation and data analysis with AI</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-generative-ai-can-help-beginners">How Generative AI Can Help Beginners</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#considerations-for-using-ai-generated-code">Considerations for Using AI-Generated Code</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
@@ -560,7 +563,7 @@ By Matthias Täschner, Robert Haase
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2024-05-27.
+  Last updated on 2024-05-29.
   <br/>
 </p>
   </div>
