@@ -27,7 +27,7 @@ parts:
     chapters:
     - file: 3_chatbots/readme.md
       sections:
-      - file: 3_chatbots/01_intro.ipynb
+      - file: 3_chatbots/gui.ipynb
 
   - caption: Information
     chapters:
