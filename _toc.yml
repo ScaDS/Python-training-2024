@@ -25,9 +25,9 @@ parts:
 
   - caption: Use of chatbots
     chapters:
-    - file: 2_chatbots/readme.md
+    - file: 3_chatbots/readme.md
       sections:
-      - file: 2_chatbots/01_intro.ipynb
+      - file: 3_chatbots/01_intro.ipynb
 
   - caption: Information
     chapters:
