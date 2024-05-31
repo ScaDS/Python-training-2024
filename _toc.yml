@@ -13,8 +13,14 @@ parts:
     chapters:
     - file: 1_python_basics/readme.md
       sections:
-      - file: 1_python_basics/01_jupyter_notebooks.ipynb
-      - file: 1_python_basics/02_basic_terms_and_types.ipynb
+      - file: 1_python_basics/1_python_and_notebooks.ipynb
+      - file: 1_python_basics/2_basic_terms_and_types.ipynb
+      - file: 1_python_basics/3_notebook_pitfalls.ipynb
+      - file: 1_python_basics/4_sequence_types.ipynb
+      - file: 1_python_basics/5_math_in_python.ipynb
+      - file: 1_python_basics/6_dictionaries.ipynb
+      - file: 1_python_basics/7_conditions_loops.ipynb
+      - file: 1_python_basics/8_custom_functions.ipynb
 
   - caption: Tables and plotting, AI supported
     chapters:
