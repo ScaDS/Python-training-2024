@@ -13,3 +13,5 @@ Each of the following topics will be covered in more detail during the training 
 * Dictionaries and tables
 * Conditions and loops
 * How to use custom functions
+
+You can [download the slides](Python-Basics.pdf)
