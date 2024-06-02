@@ -1,7 +1,10 @@
 # Python for tabular data analysis
 
 In this part of the training, we will show how Python and the [pandas](https://pandas.pydata.org/docs/index.html) package can be used to analyze structured (tabular) data. 
-We'll also make use of generative AI, i.e., chatbots, to assist us with the generation of data and code.
+
+We'll also make use of generative AI, i.e. to assist us with the generation of data and code.
+
+The slides can be downloaded [here](../3_chatbots/Chatbots.pdf)
 
 ## Use Cases for Tabular Data Analysis
 
