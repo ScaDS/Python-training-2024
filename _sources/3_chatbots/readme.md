@@ -1,7 +1,6 @@
-# A Chatbot Graphical User Interface
+# Programming a chat bot
 
-In this session,
-we use [voila](https://github.com/voila-dashboards/voila) and [openai](https://github.com/openai/openai-python) to build a basic chatbot.
+As exercise, we use [voila](https://github.com/voila-dashboards/voila) and [openai](https://github.com/openai/openai-python) to build a basic chatbot.
 You can run it by executing this code from the terminal:
 
 ```
